@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Számológép</title>
+    <link rel="stylesheet" type="text/css" href="calc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body class="light" class="color">
+    <div class="error-message" style="display: none;">You can't divide by 0!</div>
+    <div class="container">
+        <h1 id="calc"  type="text" name="calcBar"></h1>
+        <div data-number class="items" color="pink">
+            <button color="pink" onclick="displayCharacter(0)">0</button>
+        </div>
+        <div data-number class="items" color="pink" >
+            <button color="pink" onclick="displayCharacter(1)">1</button>
+        </div>
+        <div data-number class="items" color="pink">
+            <button color="pink"  onclick="displayCharacter(2)">2</button>
+        </div>
+        <div data-number class="items" color="pink">
+            <button color="pink" onclick="displayCharacter(3)">3</button>
+        </div>
+        <div data-number class="items" color="pink" >
+            <button color="pink" onclick="displayCharacter(4)">4</button>
+        </div>
+        <div data-number class="items" color="pink" >
+            <button color="pink" onclick="displayCharacter(5)">5</button>
+        </div>
+        <div data-number class="items" color="pink" >
+            <button color="pink" onclick="displayCharacter(6)">6</button>
+        </div>
+        <div data-number class="items" color="pink" >
+            <button color="pink" onclick="displayCharacter(7)">7</button>
+        </div>
+        <div data-number class="items" color="pink" >
+            <button color="pink" onclick="displayCharacter(8)">8</button>
+        </div>
+        <div data-number class="items" color="pink">
+            <button color="pink" onclick="displayCharacter(9)">9</button>
+        </div>
+        <div data-operation class="items" color="pink">
+            <button color="pink" onclick="displayCharacter('+')">+</button>
+        </div>
+        <div data-operation class="items" color="pink">
+            <button color="pink" onclick="displayCharacter('-')">-</button>
+        </div>
+        <div data-operation class="items" color="pink">
+            <button color="pink" onclick="displayCharacter('/')">÷</button>
+        </div>
+        <div data-operation class="items" color="pink">
+            <button color="pink" onclick="displayCharacter('*')">x</button>
+        </div>
+        <div data-operation class="items" color="pink">
+            <button color="pink" onclick="displayCharacter('.')">.</button>
+        </div>
+        <div data-delete class="items" color="pink">
+            <button color="pink" onclick="deleteNumber()">DEL</button>
+        </div>
+        <div data-all-clear class="items" color="pink">
+            <button color="pink" onclick="clearAll()">ACC</button>
+        </div>
+        <div data-equals class="items" color="pink">
+            <button color="pink" onclick="equals()">=</button>
+            </div>
+    </div>
+
+    <button class="paint-brush " style="font-size:24px" onclick="showPalette()"><i class="fa fa-paint-brush" style="display: flex;"></i></button>
+    <ul class="showList">
+        <li class="color">Select a theme:</li>
+        <li class="color" onclick="changeThemeLight()"><i class="fa-solid fa-square" style="color:#8c8c8c;"></i>  light</li>
+        <li class="color" onclick="changeThemeDark()"><i class="fa-solid fa-square" style="color:rgb(30, 30, 30);"></i>  dark</li>
+        <br/><li class="color">Select a color:</li>
+        <li class="color" onclick="changeColor('pink')"><i class="fa-solid fa-square" style="color:#eea3de;"></i>  pink</li>
+        <li class="color" onclick="changeColor('purple')"><i class="fa-solid fa-square" style="color:rgb(183, 140, 224);"></i>  purple</li>
+        <li class="color" onclick="changeColor('blue')"><i class="fa-solid fa-square" style="color:rgb(72, 166, 206);"></i>  blue</li>
+        <li class="color" onclick="changeColor('green')"><i class="fa-solid fa-square" style="color:rgb(106, 166, 128);"></i>  green</li>
+    </ul>
+    <script src="calc.js"></script>
+</body>
+</html>

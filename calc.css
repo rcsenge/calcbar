@@ -1,0 +1,160 @@
+body{
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+   
+body.dark{
+    background-color : rgb(0, 0, 0); 
+}
+.dark .container{
+    background-color: black;
+    border:2px solid white;
+    box-shadow:rgb(255, 255, 255) 0px 0px 20px 5px;
+}
+.dark .items{
+    box-shadow:rgb(254, 254, 254) 3px 4px 20px 0px;
+}
+.dark #calc, .dark .error-message{
+    color:#FFFFFF;
+}
+.dark button:not(i), .dark .items{
+    background-color:black; 
+}
+
+body.light {
+    background-color: aliceblue;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 104px);
+    grid-template-rows: auto repeat(5, 56px);
+    gap: 7px;
+    padding: 40px;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: whitesmoke;
+    border-radius: 5px;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+button:not(.paint-brush, i){
+    color: white;
+    border: none;
+}
+
+#calc{
+    height: 56px;
+    text-align: right;
+    grid-column: span 4;
+    color:black;
+}
+
+.error-message{
+    color:deeppink;
+    display: none;
+    font-weight: bold;
+}
+
+i.paint-brush, button.paint-brush{
+    display: flex;
+}
+.paint-brush{
+    width: 48px;
+    height: 48px;
+    background-color: #d9a3ee;
+    color: white;
+    border: 2px;
+    border-radius: 50%;
+    position: fixed; 
+    top: 20px; 
+    left: 20px; 
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+i{
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+ul{
+    padding: 5;
+    margin: 15px;
+    text-align: left;
+    list-style: none;
+    margin-top: 78px;
+    margin-left: 35px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none; 
+    cursor: pointer;
+    width: 140px;
+    position: fixed;
+    top: 5px;
+    left: 0px;
+}
+
+.color{
+    color: rgb(101, 101, 101);
+}
+
+.prompt{
+    color: rgb(101, 101, 101);
+    size: 20px;
+}
+
+li:not(i) {
+    margin-bottom: 5px;
+    font-size: large;
+    font-family: "Lucida Sans Typewriter", "Lucida Console",  "Bitstream Vera Sans Mono", monospace; 
+}
+
+div.container button{
+    width: 100px;
+    height: 50px;
+}
+.light [color="pink"]{
+    background-color:#eea3de;
+}
+.dark [color="pink"]{
+    background-color:rgb(108 0 85);
+}
+.light [color="purple"]{
+    background-color:rgb(183, 140, 224);
+}
+.dark [color="purple"]{
+    background-color:rgb(40 11 67);
+}
+.light [color="blue"]{
+    background-color:rgb(139 187 234);
+}
+.dark [color="blue"]{
+    background-color:rgb(20 21 44);
+}
+.light [color="green"]{
+    background-color:rgb(106, 166, 128);
+}
+.dark [color="green"]{
+    background-color:rgb(16 55 30);
+}
