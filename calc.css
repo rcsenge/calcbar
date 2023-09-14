@@ -5,7 +5,7 @@ body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 20px; 
 }
    
 body.dark{
@@ -21,9 +21,6 @@ body.dark{
 }
 .dark #calc, .dark .error-message{
     color:#FFFFFF;
-}
-.dark button:not(i), .dark .items{
-    background-color:black; 
 }
 
 body.light {
@@ -47,15 +44,9 @@ body.light {
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-    color: whitesmoke;
     border-radius: 5px;
     box-shadow: none;
     cursor: pointer;
-}
-
-button:not(.paint-brush, i){
-    color: white;
-    border: none;
 }
 
 #calc{
@@ -69,6 +60,10 @@ button:not(.paint-brush, i){
     color:deeppink;
     display: none;
     font-weight: bold;
+}
+button:not(.paint-brush, i){
+    color: white;
+    border: none;
 }
 
 i.paint-brush, button.paint-brush{
@@ -110,6 +105,7 @@ ul{
     display: none; 
     cursor: pointer;
     width: 140px;
+    line-height: 20px;
     position: fixed;
     top: 5px;
     left: 0px;
@@ -134,27 +130,37 @@ div.container button{
     width: 100px;
     height: 50px;
 }
-.light [color="pink"]{
+
+
+.light[color="pink"] div:not(:first-child):not(:nth-child(2)),
+.light[color="pink"] button {
     background-color:#eea3de;
 }
-.dark [color="pink"]{
+.dark[color="pink"] div:not(:first-child):not(:nth-child(2)),
+.dark[color="pink"] button {
     background-color:rgb(108 0 85);
 }
-.light [color="purple"]{
+.light[color="purple"] div:not(:first-child):not(:nth-child(2)),
+.light[color="purple"] button {
     background-color:rgb(183, 140, 224);
 }
-.dark [color="purple"]{
+.dark[color="purple"] div:not(:first-child):not(:nth-child(2)),
+.dark[color="purple"] button {
     background-color:rgb(40 11 67);
 }
-.light [color="blue"]{
+.light[color="blue"] div:not(:first-child):not(:nth-child(2)),
+.light[color="blue"] button {
     background-color:rgb(139 187 234);
 }
-.dark [color="blue"]{
+.dark[color="blue"] div:not(:first-child):not(:nth-child(2)),
+.dark[color="blue"] button {
     background-color:rgb(20 21 44);
 }
-.light [color="green"]{
+.light[color="green"] div:not(:first-child):not(:nth-child(2)),
+.light[color="green"] button {
     background-color:rgb(106, 166, 128);
 }
-.dark [color="green"]{
+.dark[color="green"] div:not(:first-child):not(:nth-child(2)),
+.dark[color="green"] button {
     background-color:rgb(16 55 30);
 }
