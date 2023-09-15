@@ -1,9 +1,9 @@
 var calcBar = $('#calc'); 
 var value = []; 
-const $errorMessage = $(".error-message");
+var $errorMessage = $(".error-message");
 
-function showPalette() {
-    $('ul.showList').toggle();
+function showsPalette() {
+    $('ul.showPaletteList').toggle();
 }
 
 function changeThemeLight(){
@@ -36,12 +36,19 @@ function clearAll() {
 }
 
 function equals() {
+    historyArray.push(value.join(''));
+    var result = eval(value.join(''));
     if (result === Infinity){
         $errorMessage.text("Error: Division by zero");
         $errorMessage.show();
         value = [];
         return; 
     }
-    parseFloat(result);
-    calcBar.text(result);
+    value = [result.toString()]; 
+    calcBar.text(value.join(''));
+    value=[];
 }
+
+
+
+    
