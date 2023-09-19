@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
- 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,76 +11,76 @@
 </head>
 
 <body class="light" class="color" color="pink">
-    <div class="error-message" style="display: none;">You can't divide by 0!</div>
-    <div class="container">
-        <h1 id="calc"  type="text" name="calcBar"></h1>
-        <div data-number class="items">
-            <button onclick="displayCharacter(0)">0</button>
-        </div>
-        <div data-number class="items">
-            <button onclick="displayCharacter(1)">1</button>
-        </div>
-        <div data-number class="items">
-            <button onclick="displayCharacter(2)">2</button>
-        </div>
-        <div data-number class="items">
-            <button onclick="displayCharacter(3)">3</button>
-        </div>
-        <div data-number class="items">
-            <button onclick="displayCharacter(4)">4</button>
-        </div>
-        <div data-number class="items">
-            <button onclick="displayCharacter(5)">5</button>
-        </div>
-        <div data-number class="items">
-            <button onclick="displayCharacter(6)">6</button>
-        </div>
-        <div data-number class="items">
-            <button onclick="displayCharacter(7)">7</button>
-        </div>
-        <div data-number class="items">
-            <button onclick="displayCharacter(8)">8</button>
-        </div>
-        <div data-number class="items">
-            <button onclick="displayCharacter(9)">9</button>
-        </div>
-        <div data-operation class="items">
-            <button onclick="displayCharacter('+')">+</button>
-        </div>
-        <div data-operation class="items">
-            <button onclick="displayCharacter('-')">-</button>
-        </div>
-        <div data-operation class="items">
-            <button onclick="displayCharacter('/')">÷</button>
-        </div>
-        <div data-operation class="items">
-            <button onclick="displayCharacter('*')">x</button>
-        </div>
-        <div data-operation class="items">
-            <button onclick="displayCharacter('.')">.</button>
-        </div>
-        <div data-delete class="items">
-            <button onclick="deleteNumber()">DEL</button>
-        </div>
-        <div data-all-clear class="items">
-            <button onclick="clearAll()">ACC</button>
-        </div>
-        <div data-equals class="items">
-            <button onclick="equals()">=</button>
-            </div>
+<div class="error-message" style="display: none;">You can't divide by 0!</div>
+<div class="container">
+    <h1 id="calc"  type="text" name="calcBar"></h1>
+    <div data-number class="items">
+        <button onclick="displayCharacter(0)">0</button>
     </div>
+    <div data-number class="items">
+        <button onclick="displayCharacter(1)">1</button>
+    </div>
+    <div data-number class="items">
+        <button onclick="displayCharacter(2)">2</button>
+    </div>
+    <div data-number class="items">
+        <button onclick="displayCharacter(3)">3</button>
+    </div>
+    <div data-number class="items">
+        <button onclick="displayCharacter(4)">4</button>
+    </div>
+    <div data-number class="items">
+        <button onclick="displayCharacter(5)">5</button>
+    </div>
+    <div data-number class="items">
+        <button onclick="displayCharacter(6)">6</button>
+    </div>
+    <div data-number class="items">
+        <button onclick="displayCharacter(7)">7</button>
+    </div>
+    <div data-number class="items">
+        <button onclick="displayCharacter(8)">8</button>
+    </div>
+    <div data-number class="items">
+        <button onclick="displayCharacter(9)">9</button>
+    </div>
+    <div data-operation class="items">
+        <button onclick="displayCharacter('+')">+</button>
+    </div>
+    <div data-operation class="items">
+        <button onclick="displayCharacter('-')">-</button>
+    </div>
+    <div data-operation class="items">
+        <button onclick="displayCharacter('/')">÷</button>
+    </div>
+    <div data-operation class="items">
+        <button onclick="displayCharacter('*')">x</button>
+    </div>
+    <div data-operation class="items">
+        <button onclick="displayCharacter('.')">.</button>
+    </div>
+    <div data-delete class="items">
+        <button onclick="displayCharacter('DEL')">DEL</button>
+    </div>
+    <div data-all-clear class="items">
+        <button onclick="displayCharacter('ACC')">ACC</button>
+    </div>
+    <div data-equals class="items">
+        <button onclick="displayCharacter('=')">=</button>
+    </div>
+</div>
 
-    <button class="paint-brush " style="font-size:24px" onclick="showPalette()"><i class="fa fa-paint-brush" style="display: flex;"></i></button>
-    <ul class="showList">
-        <li class="color">Select a theme:</li>
-        <li class="color" onclick="changeThemeLight()"><i class="fa-solid fa-square" style="color:#8c8c8c;"></i>  light</li>
-        <li class="color" onclick="changeThemeDark()"><i class="fa-solid fa-square" style="color:rgb(30, 30, 30);"></i>  dark</li>
-        <br/><li class="color">Select a color:</li>
-        <li class="color" onclick="changeColor('pink')"><i class="fa-solid fa-square" style="color:#eea3de;"></i>  pink</li>
-        <li class="color" onclick="changeColor('purple')"><i class="fa-solid fa-square" style="color:rgb(183, 140, 224);"></i>  purple</li>
-        <li class="color" onclick="changeColor('blue')"><i class="fa-solid fa-square" style="color:rgb(72, 166, 206);"></i>  blue</li>
-        <li class="color" onclick="changeColor('green')"><i class="fa-solid fa-square" style="color:rgb(106, 166, 128);"></i>  green</li>
-    </ul>
-    <script src="calc.js"></script>
+<button class="paint-brush " style="font-size:24px" onclick="showPalette()"><i class="fa fa-paint-brush" style="display: flex;"></i></button>
+<ul class="showList">
+    <li class="color">Select a theme:</li>
+    <li class="color" onclick="changeThemeLight()"><i class="fa-solid fa-square" style="color:#8c8c8c;"></i>  light</li>
+    <li class="color" onclick="changeThemeDark()"><i class="fa-solid fa-square" style="color:rgb(30, 30, 30);"></i>  dark</li>
+    <br/><li class="color">Select a color:</li>
+    <li class="color" onclick="changeColor('pink')"><i class="fa-solid fa-square" style="color:#eea3de;"></i>  pink</li>
+    <li class="color" onclick="changeColor('purple')"><i class="fa-solid fa-square" style="color:rgb(183, 140, 224);"></i>  purple</li>
+    <li class="color" onclick="changeColor('blue')"><i class="fa-solid fa-square" style="color:rgb(72, 166, 206);"></i>  blue</li>
+    <li class="color" onclick="changeColor('green')"><i class="fa-solid fa-square" style="color:rgb(106, 166, 128);"></i>  green</li>
+</ul>
+<script src="calc.js"></script>
 </body>
 </html>

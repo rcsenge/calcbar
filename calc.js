@@ -1,9 +1,49 @@
-var calcBar = $('#calc'); 
-var value = []; 
-var $errorMessage = $(".error-message");
+var calcBar = $('#calc');
+var calcValue = '';
 
-function showsPalette() {
-    $('ul.showPaletteList').toggle();
+function displayCharacter(a){
+    if (isNaN(a)){
+        switch (a){
+            case ('+'):
+                calcValue+='+';
+                calcBar.text('+');
+                break;
+            case('-'):
+                calcValue += '-';
+                calcBar.text('-');
+                break;
+            case ('*'):
+                calcValue +='*';
+                calcBar.text('*');
+                break;
+            case ('/'):
+                calcValue +='/';
+                calcBar.text('/');
+                break;
+            case ('.'):
+                calcValue +='.';
+                calcBar.text('.');
+                break;
+            case ('='):
+                var result = eval(calcValue);
+                calcBar.text(result);
+                break;
+            case ('DEL'):
+                calcValue = calcValue.substring(0,calcValue.length-1);
+                calcBar.text(calcValue);
+                break;
+            case ('ACC'):
+                calcValue = '';
+                calcBar.text('');
+            }
+    }else{
+        calcValue += a;
+        calcBar.text(calcValue);
+    }
+}
+
+function showPalette() {
+    $('ul.showList').toggle();
 }
 
 function changeThemeLight(){
@@ -18,37 +58,7 @@ function changeClass(selector, oldClass, newClass){
 }
 
 function changeColor(color){
-    $('[color]').attr('color', color);   
-}
-
-function displayCharacter(a) {
-    value.push(a.toString());
-    calcBar.text(value.join(''));
-}
-
-function deleteNumber(){
-    value.pop(); 
-}
-
-function clearAll() {
-    value = [];
-    calcBar.text('');
-}
-
-function equals() {
-    historyArray.push(value.join(''));
-    var result = eval(value.join(''));
-    if (result === Infinity){
-        $errorMessage.text("Error: Division by zero");
-        $errorMessage.show();
-        value = [];
-        return; 
-    }
-    value = [result.toString()]; 
-    calcBar.text(value.join(''));
-    value=[];
+    $('[color]').attr('color', color);
 }
 
 
-
-    
